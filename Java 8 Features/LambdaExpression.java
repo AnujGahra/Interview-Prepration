@@ -20,3 +20,10 @@ public class LambdaExpression {
         obj.sum(10, 20);
     }
 }
+
+// Benefits of Lambda Expression
+// 1. To enable functional programming in Java
+// 2. To make code more readable, maintainable and concise code
+// 3. To anable parallel processing in Java
+// 4. JAR file size reduction
+// 5. Elimination of shadow variables

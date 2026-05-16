@@ -9,6 +9,25 @@ public class Basicsll {
         System.out.print("null");
     }
 
+    // Displaying using recursion
+    public static void displayRecursion(Node head) {
+        if (head == null) {
+            System.out.print("null");
+            return;
+        }
+        System.out.print(head.data + " -> ");
+        displayRecursion(head.next);
+    }
+
+    public static void displayRecursionRev(Node head) {
+        if (head == null) {
+            // System.out.print("null");
+            return;
+        }
+        displayRecursionRev(head.next);
+        System.out.print(head.data + " -> ");
+    }
+
     public static class Node {
         int data;
         Node next;
@@ -34,8 +53,10 @@ public class Basicsll {
 
 
         display(a);
-
-
-        
+        System.out.println();
+        displayRecursion(a);
+        System.out.println();
+        displayRecursionRev(a);
+        System.out.println();
     }
 }

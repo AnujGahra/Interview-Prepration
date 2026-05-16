@@ -1,5 +1,14 @@
 public class Basicsll {
 
+    public static void display(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.print("null");
+    }
+
     public static class Node {
         int data;
         Node next;
@@ -24,12 +33,7 @@ public class Basicsll {
         d.next = e;
 
 
-        Node temp = a;
-        while (temp != null) {
-            System.out.print(temp.data + " -> ");
-            temp = temp.next;
-        }
-        System.out.print("null");
+        display(a);
 
 
         

@@ -22,7 +22,16 @@ public class Basicsll {
         b.next = c;
         c.next = d;
         d.next = e;
-        
+
+
+        Node temp = a;
+        while (temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.print("null");
+
+
         
     }
 }

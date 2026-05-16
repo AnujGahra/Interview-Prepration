@@ -9,6 +9,7 @@ public class HollowRectangle {
             for (int j = 1; j <= cols; j++) {
                 if (i == 1 || i == rows || j == 1 || j == cols) {
                     System.out.print("* ");
+                    // System.out.print(i + " ");
                 } else {
                     System.out.print("  ");
                 }

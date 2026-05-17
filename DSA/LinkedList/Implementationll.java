@@ -30,6 +30,20 @@ public class Implementationll {
             }
         }
 
+        // insert at the beginning of linked list
+        void insertAtBeginning(int data) {
+            Node temp = new Node(data);
+            if(head == null) {
+                head = temp;
+                tail = temp;
+            } else {
+                temp.next = head;
+                head = temp;
+            }
+
+
+        }
+
 
         // Displaying the linked list
         void display() {
@@ -54,6 +68,11 @@ public class Implementationll {
         list.insertAtEnd(15);
 
         // print the LinkedList
+        list.display();
+
+        list.insertAtBeginning(3);
+        list.insertAtBeginning(2);
+        System.out.println();
         list.display();
 
     }

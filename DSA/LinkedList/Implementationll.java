@@ -97,6 +97,17 @@ public class Implementationll {
             tail = temp;
         }
 
+        // delete at the end of linked list
+        void deleteAtEnd() {
+            Node temp = head;
+            
+            while(temp.next != tail) {
+                temp = temp.next;
+            }
+            temp.next = null;
+            tail = temp;
+        }
+
 
         // Displaying the linked list
         void display() {

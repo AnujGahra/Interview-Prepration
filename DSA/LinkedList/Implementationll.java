@@ -116,7 +116,19 @@ public class Implementationll {
             }
             head = head.next;
             temp.next = null;
-            
+
+        }
+
+        // find the middle element of linked list
+        int findMiddle() {
+            Node slow = head;
+            Node fast = head;
+
+            while(fast != null && fast.next != null) {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            return slow.data;
         }
 
 

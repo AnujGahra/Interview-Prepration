@@ -81,7 +81,21 @@ public class Implementationll {
         }
 
 
-        // 
+        // delete at the index method
+        void deleteAtIndex(int pos) {
+            Node temp = head;
+
+            if(pos == 0) {
+                head = head.next;
+                return;
+            }
+
+            for(int i = 1; i < pos; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            tail = temp;
+        }
 
 
         // Displaying the linked list
@@ -137,5 +151,9 @@ public class Implementationll {
 
         System.out.println();
         System.out.println("Element at position 3: " + list.getElement(3));
+
+        list.deleteAtIndex(3);
+        System.out.println();
+        list.display();
     }
 }

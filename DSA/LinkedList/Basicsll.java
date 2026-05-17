@@ -1,5 +1,17 @@
 public class Basicsll {
 
+
+    public static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            
+        }
+    }
+
+
     public static void display(Node head) {
         Node temp = head;
         while (temp != null) {
@@ -28,15 +40,17 @@ public class Basicsll {
         System.out.print(head.data + " -> ");
     }
 
-    public static class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-            
+    // length of linked list
+    public static int length(Node head) {
+        Node temp = head;
+        int count = 0;
+        while(temp != null) {
+            count++;
+            temp = temp.next;
         }
+        return count;
     }
+    
 
     public static void main(String[] args) {
         Node a = new Node(5);
@@ -58,5 +72,6 @@ public class Basicsll {
         System.out.println();
         displayRecursionRev(a);
         System.out.println();
+        System.out.println("Length of linked list: " + length(a));
     }
 }

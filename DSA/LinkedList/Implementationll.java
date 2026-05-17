@@ -44,6 +44,31 @@ public class Implementationll {
 
         }
 
+        // insert at given Position
+
+        void insertAtPosition(int data, int pos) {
+
+            Node newNode = new Node(data);
+            Node temp = head;
+
+            if(pos == size() + 1) {
+                insertAtEnd(data);
+                return;
+            } else if(pos == 0) {
+                insertAtBeginning(data);
+                return;
+            } else if(pos < 0 || pos > size()) {
+                System.out.println("Invalid position");
+                return;
+            } else {
+                for(int i = 0; i < pos - 1; i++) {
+                    temp = temp.next;
+                }
+                newNode.next = temp.next;
+                temp.next = newNode;
+            }
+        }
+
 
         // Displaying the linked list
         void display() {
@@ -54,6 +79,9 @@ public class Implementationll {
             }
             System.out.print("null");
         }
+
+
+
 
 
         // find the size of linked list
@@ -88,5 +116,9 @@ public class Implementationll {
         list.display();
         System.out.println();
         System.out.println("Size of linked list: " + list.size());
+
+        list.insertAtPosition(7, 3);
+        System.out.println();
+        list.display();
     }
 }

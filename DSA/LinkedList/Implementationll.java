@@ -108,6 +108,17 @@ public class Implementationll {
             tail = temp;
         }
 
+        // delete at the beginning of linked list
+        void deleteAtBeginning() {
+            Node temp = head;
+            if(temp == null) {
+                return;
+            }
+            head = head.next;
+            temp.next = null;
+            
+        }
+
 
         // Displaying the linked list
         void display() {

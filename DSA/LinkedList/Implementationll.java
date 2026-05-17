@@ -70,6 +70,20 @@ public class Implementationll {
         }
 
 
+        // getElement method
+        int getElement(int pos) {
+            Node temp = head;
+
+            for(int i = 1; i<=pos; i++){
+                temp = temp.next;
+            }
+            return temp.data;
+        }
+
+
+        // 
+
+
         // Displaying the linked list
         void display() {
             Node temp = head;
@@ -120,5 +134,8 @@ public class Implementationll {
         list.insertAtPosition(7, 3);
         System.out.println();
         list.display();
+
+        System.out.println();
+        System.out.println("Element at position 3: " + list.getElement(3));
     }
 }

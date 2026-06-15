@@ -12,6 +12,8 @@ int main() {
     };
 
     
+
+
     struct student s1;
     // size of structure
     printf("Size of structure student: %lu bytes\n", sizeof(struct student));

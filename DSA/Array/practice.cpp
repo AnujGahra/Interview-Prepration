@@ -85,14 +85,28 @@ public:
     }
 
     // Search Element
-    void getElement(int target) {
-        for(int i = 0; i<size; i++) {
-            if(arr[i] == target) cout << "Element Founded at Index: " << i << endl;
-           
-            else cout << "Element Not Founded" << endl;
-            
+    void getElement(int target)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            if (arr[i] == target)
+                cout << "Element Founded at Index: " << i << endl;
+
+            else
+                cout << "Element Not Founded" << endl;
         }
     }
+
+    // isEmplty
+    string isEmpty()
+    {
+        if (size == capacity)
+            return "false";
+        else
+            return "true";
+    }
+
+    
 };
 
 int main()
@@ -103,26 +117,27 @@ int main()
     vector.push(30);
     vector.push(40);
     vector.push(70);
+    vector.push(80);
+    vector.push(90);
+    // vector.push(95);
 
     // vector.print();
-    
 
     // cout << endl;
 
     // cout << "Capacity: " << vector.getCapacity()<< endl;
     // cout << "Size: " << vector.getSize()<< endl;
 
-
     // vector.pop();
     // vector.pop();
     // vector.pop();
 
     // vector.print();
     // cout << endl;
-    // cout << "Capacity: " << vector.getCapacity()<< endl;
-    // cout << "Size: " << vector.getSize()<< endl;
+    cout << "Capacity: " << vector.getCapacity()<< endl;
+    cout << "Size: " << vector.getSize()<< endl;
 
-    vector.getElement(70);
+    // vector.getElement(70);
 
-    
+    cout << vector.isEmpty() << endl;
 }

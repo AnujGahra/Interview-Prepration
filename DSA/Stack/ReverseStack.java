@@ -3,9 +3,7 @@ import java.util.Stack;
 public class ReverseStack {
 
 
-    public static void reverseStack(Stack<Integer> st) {
-        
-    }
+    
     
 
     public static void main(String[] args) {
@@ -14,23 +12,23 @@ public class ReverseStack {
         st.push(20);
         st.push(30);
         st.push(40);
-        // System.out.println("Original Stack: " + st);
+        System.out.println("Original Stack: " + st);
 
-        // Stack<Integer> rt = new Stack<>();
-        // while(st.size() > 0) {
-        //     rt.push(st.pop());
-        // }
-        // System.out.println("Reversed Stack: " + rt);
+        Stack<Integer> rt = new Stack<>();
+        while(st.size() > 0) {
+            rt.push(st.pop());
+        }
+        System.out.println("Reversed Stack: " + rt);
 
-        // while(rt.size() > 0) {
-        //     st.push(rt.pop());
-        // }
-        // System.out.println("Stack after reversing again: " + st);
+        Stack<Integer> qt = new Stack<>();
+        while(rt.size() > 0) {
+            qt.push(rt.pop());
+        }
+        System.out.println("New Stack: " + qt);
 
-        // Stack<Integer> nt = new Stack<>();
-        // while(rt.size() > 0) {
-        //     nt.push(rt.pop());
-        // }
-        // System.out.println("New Stack: " + nt);
+        while(qt.size() > 0) {
+            st.push(qt.pop());
+        }
+        System.out.println("Stack after moving elements back: " + st);
     }
 }

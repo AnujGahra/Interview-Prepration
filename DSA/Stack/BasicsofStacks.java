@@ -45,6 +45,9 @@ public class BasicsofStacks {
 
         // isEmpty
         System.out.println("Is stack empty? " + stack.isEmpty());
+
+        
+
         
     }
 }

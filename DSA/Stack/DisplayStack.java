@@ -20,6 +20,21 @@ public class DisplayStack {
                 st.push(x);
             }
             System.out.println();
-            System.out.println("Reversed stack: " + st);
+            System.out.println(" stack: " + st);
+
+
+            // using array
+            int n = st.size();
+            int[] arr = new int[n];
+            for(int i = n-1; i>=0; i--) {
+                arr[i] = st.pop();
+            }
+
+            for(int i = 0; i<n; i++) {
+                System.out.print(arr[i] + " ");
+                st.push(arr[i]);
+            }
+            System.out.println();
+            System.out.println(" stack: " + st);
     }
 }

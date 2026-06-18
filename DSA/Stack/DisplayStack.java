@@ -15,6 +15,18 @@ public class DisplayStack {
 
     }
 
+    // insert at index using recursion
+    public static void insertAtIndexRec(Stack<Integer> st, int idx, int x)
+    {
+        if(idx == 0) {
+            st.push(x);
+            return;
+        }
+        int top = st.pop();
+        insertAtIndexRec(st, idx-1, x);
+        st.push(top);
+    }
+
     
     public static void main(String[] args) {
             Stack<Integer> st = new Stack<>();

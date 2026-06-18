@@ -75,6 +75,19 @@ public class DisplayStack {
         // System.out.println();
         // System.out.println(" stack: " + st);
 
+
+        // insert at index
+        int idx = 2;
+        int x = 7;
+        insertAtIndexRec(st, idx, x);
+        System.out.println("Stack after insertion: " + st);
+
+        // delete at index
+        idx = 1;
+        deleteAtIndexRec(st, idx);
+        System.out.println("Stack after deletion: " + st);
+        
+
     }
 
 }

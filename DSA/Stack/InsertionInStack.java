@@ -25,5 +25,18 @@ public class InsertionInStack {
             st.push(temp.pop());
         }
         System.out.println("Stack after insertion: " + st);
+
+        // remove from bottom / any index
+        idx = 1;
+        Stack<Integer> temp2 = new Stack<>();
+        while(st.size() > idx) {
+            temp2.push(st.pop());
+        }
+        st.pop();
+        while(temp2.size() > 0) {
+            st.push(temp2.pop());
+        }
+        System.out.println("Stack after deletion: " + st);
+
     }
 }

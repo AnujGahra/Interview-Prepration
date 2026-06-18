@@ -27,6 +27,17 @@ public class DisplayStack {
         st.push(top);
     }
 
+    // delete at index using recursion
+    public static void deleteAtIndexRec(Stack<Integer> st, int idx) {
+        if(idx == 0) {
+            st.pop();
+            return;
+        }
+        int top = st.pop();
+        deleteAtIndexRec(st, idx-1);
+        st.push(top);
+    }
+
     
     public static void main(String[] args) {
             Stack<Integer> st = new Stack<>();

@@ -10,5 +10,20 @@ public class InsertionInStack {
         st.push(30);
         st.push(40);
         System.out.println("Original stack: " + st);
+
+        int idx = 2;
+        int x = 7;
+
+        Stack<Integer> temp = new Stack<>();
+
+        while(st.size() > idx) {
+            temp.push(st.pop());
+        }
+        st.push(x);
+
+        while(temp.size() > 0) {
+            st.push(temp.pop());
+        }
+        System.out.println("Stack after insertion: " + st);
     }
 }

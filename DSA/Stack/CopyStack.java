@@ -18,5 +18,23 @@ public class CopyStack {
         }
 
         System.out.println("Original stack: " + st);
+
+
+        // reverse order
+        Stack<Integer> rt = new Stack<>();
+        while(st.size() > 0) {
+            // int x = st.peek();
+            // rt.push(x);
+            // st.pop();
+            rt.push(st.pop());
+        }
+
+        // copying the elements 
+        Stack<Integer> nt = new Stack<>();
+        while(rt.size() > 0) {
+            nt.push(rt.pop());
+        }
+        System.out.println("Reversed stack: " + rt);
+        System.out.println("Copied stack: " + nt);
     }
 }

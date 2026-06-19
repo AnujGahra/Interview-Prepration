@@ -64,11 +64,37 @@ public class ArrayImplementation {
                 return false;
             }
         }
+
+
+        // getCapacity
+        int getCapacity() {
+            return arr.length;
+        }
     }
 
     public static void main(String[] args) {
 
         Stack st = new Stack();
+        st.push(10);
+        st.display();
+        st.push(20);
+        st.display();
+        st.push(30);
+        st.display();
+        st.push(40);
+        st.display();
+        st.push(50);
+        st.display();
+        st.push(60);
+        st.display();
 
+        
+        System.out.println("Size of stack: " + st.size());
+
+        // isFull
+        System.out.println("Is stack full? " + st.isFull());
+
+        // getCapacity
+        System.out.println("Capacity of stack: " + st.getCapacity());
     }
 }

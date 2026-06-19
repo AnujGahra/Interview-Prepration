@@ -5,10 +5,32 @@ public class ArrayImplementation {
 
         private int idx = 0;
 
+        //  I am creating a method for make dynamic stack when stack will be full then it will double the size of stack
+
+        // how it works?
+        // 1. create a new array with double the size of the current array
+        // 2. copy the elements from the current array to the new array
+        // 3. assign the new array to the current array
+        // 4. delete the old array
+        
+        // push element
+
+        // method implementation for dynamic stack
+        private void resize() {
+            int[] newArr = new int[arr.length * 2];
+            for (int i = 0; i < arr.length; i++) {
+                newArr[i] = arr[i];
+            }
+            arr = newArr;
+        }
+
+
+
         void push(int x) {
             if(isFull()) {
                 System.out.println("Stack is full");
                 return;
+                // resize();
             }
             arr[idx] = x;
             idx++;

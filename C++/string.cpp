@@ -23,6 +23,8 @@ bool compare(string str1, string str2) {
 //     return length;
 // }
 
+
+
 int stringLength(string str) {
     int length = 0;
     for(int i = 0; i < str.size(); i++) {
@@ -32,9 +34,13 @@ int stringLength(string str) {
 }
 
 
+
 int main() {
     string str1 = "Hello";
     string str2 = "World";
+
+    cout << str1[0] << endl; // Accessing the first character of str1
+    cout << str2[0] << endl; // Accessing the first character of str2
 
     string str3 = str1.append(str2); // Using the built-in concatenate function
     cout << "Built-in Concatenated String: " << str3 << endl;

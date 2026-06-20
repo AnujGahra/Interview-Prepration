@@ -14,9 +14,15 @@ bool compare(string str1, string str2) {
 
 
 
+
+
+
 int main() {
     string str1 = "Hello";
     string str2 = "World";
+
+    string str3 = str1.append(str2); // Using the built-in concatenate function
+    cout << "Built-in Concatenated String: " << str3 << endl;
 
     // Concatenating str1 and str2
     string result = concatenate(str1, str2);

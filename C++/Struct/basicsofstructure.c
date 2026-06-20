@@ -1,4 +1,6 @@
 #include<stdio.h>
+
+
 int main() {
     struct student {
         char name[20];
@@ -11,19 +13,28 @@ int main() {
         } course_info;
     };
 
-    
+    union data {
+        int i;
+        float f;
+        char str[20];
+    } data_info;
 
 
-    struct student s1;
-    // size of structure
-    printf("Size of structure student: %lu bytes\n", sizeof(struct student));
-    // size of structure members
-    printf("Size of name: %lu bytes\n", sizeof(s1.name));
-    printf("Size of age: %lu bytes\n", sizeof(s1.age));
-    printf("Size of marks: %lu bytes\n", sizeof(s1.marks));
-    printf("Size of course_info: %lu bytes\n", sizeof(s1.course_info));
-    // size of nested structure members
-    printf("Size of course_name: %lu bytes\n", sizeof(s1.course_info.course_name));
-    printf("Size of course_code: %lu bytes\n", sizeof(s1.course_info.course_code));
+
+    union data d1;
+    cout << "Size of union data: " << sizeof(union data) << " bytes" << endl;
+
+
+    // struct student s1;
+    // // size of structure
+    // printf("Size of structure student: %lu bytes\n", sizeof(struct student));
+    // // size of structure members
+    // printf("Size of name: %lu bytes\n", sizeof(s1.name));
+    // printf("Size of age: %lu bytes\n", sizeof(s1.age));
+    // printf("Size of marks: %lu bytes\n", sizeof(s1.marks));
+    // printf("Size of course_info: %lu bytes\n", sizeof(s1.course_info));
+    // // size of nested structure members
+    // printf("Size of course_name: %lu bytes\n", sizeof(s1.course_info.course_name));
+    // printf("Size of course_code: %lu bytes\n", sizeof(s1.course_info.course_code));
     return 0;
 }

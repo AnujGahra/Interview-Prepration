@@ -1,18 +1,17 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 // custom function for concatination of two strings
-string concatenate(string str1, string str2) {
+string concatenate(string str1, string str2)
+{
     return str1 + " " + str2; // Concatenating with a space in
-
 }
 
 // custom function for comparing two strings
-bool compare(string str1, string str2) {
+bool compare(string str1, string str2)
+{
     return str1 == str2; // Returns true if strings are equal, false otherwise
 }
-
-
 
 // custom logic for find string length
 // int stringLength(string str) {
@@ -23,19 +22,31 @@ bool compare(string str1, string str2) {
 //     return length;
 // }
 
-
-
-int stringLength(string str) {
+int stringLength(string str)
+{
     int length = 0;
-    for(int i = 0; i < str.size(); i++) {
+    for (int i = 0; i < str.size(); i++)
+    {
         length++;
     }
     return length;
 }
 
+// custom at() method to access character at a specific index
+char charAt(string str, int index)
+{
+    if (index >= 0 && index < str.size())
+    {
+        return str[index]; // Accessing character at the specified index
+    }
+    else
+    {
+        throw out_of_range("Index out of range"); // Throwing an exception for invalid index
+    }
+}
 
-
-int main() {
+int main()
+{
     string str1 = "Hello";
     string str2 = "World";
 
@@ -56,10 +67,18 @@ int main() {
     cout << "Length of String 2: " << len2 << endl;
 
     // Comparing str1 and str2
-    if (compare(str1, str2)) {
+    if (compare(str1, str2))
+    {
         cout << "The strings are equal." << endl;
-    } else {
+    }
+    else
+    {
         cout << "The strings are not equal." << endl;
     }
     return 0;
+
+    // Accessing character at a specific index
+
+    char ch = charAt(str2, 1); // Accessing the second character of
+    cout << "Character at index 1 of str1: " << ch << endl;
 }

@@ -7,19 +7,26 @@ string concatenate(string str1, string str2) {
 
 }
 
+// custom function for comparing two strings
+bool compare(string str1, string str2) {
+    return str1 == str2; // Returns true if strings are equal, false otherwise
+}
+
 
 
 int main() {
     string str1 = "Hello";
     string str2 = "World";
 
-    string str3 = str1 + " " + str2; // Concatenation
-    cout << str3 << endl; // Output: Hello World
+    // Concatenating str1 and str2
+    string result = concatenate(str1, str2);
+    cout << "Concatenated String: " << result << endl;
 
-    string str4 = "Hello";
-    if (str1 == str4) {
-        cout << "str1 and str4 are equal." << endl; // This will be printed
+    // Comparing str1 and str2
+    if (compare(str1, str2)) {
+        cout << "The strings are equal." << endl;
+    } else {
+        cout << "The strings are not equal." << endl;
     }
-
     return 0;
 }

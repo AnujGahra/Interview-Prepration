@@ -7,11 +7,14 @@ int main() {
     cin >> n;
 
     cout << "Prime factors of " << n << " are: ";
-    for (int i = 2; i <= n; i++) {
+    for (int i = 2; i*i <= n; i++) {
         while (n % i == 0) {
             cout << i << " ";
             n /= i;
         }
     }
+    if (n > 1)
+        cout << n;
+
     return 0;
 }

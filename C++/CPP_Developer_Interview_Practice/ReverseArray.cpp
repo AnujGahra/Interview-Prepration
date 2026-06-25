@@ -17,7 +17,13 @@ int main() {
     int j = n - 1;
 
     while( i < j) {
-        swap(arr[i++], arr[j--]);
+        // swap(arr[i++], arr[j--]);
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+
+        i++;
+        j--;
         
     }
 

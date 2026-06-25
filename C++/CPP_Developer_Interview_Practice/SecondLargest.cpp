@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 
     // int arr[] = {12, 35, 1, 10, 34, 1};
-    
+    int arr[] = {10, 10, 10, 10, 10, 10};
     int n = sizeof(arr)/sizeof(arr[0]);
 
 

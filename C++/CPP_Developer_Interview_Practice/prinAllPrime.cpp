@@ -1,0 +1,20 @@
+#include<iostream> 
+using namespace std;
+
+
+int main() {
+    
+    for(int num = 2; num <=100; num++) {
+        bool isPrime = true;
+        for(int i = 2; i*i <= 100; i++) {
+            if(num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if(isPrime){
+            cout << num << " ";
+        }
+    }
+}

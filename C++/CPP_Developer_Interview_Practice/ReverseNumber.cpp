@@ -1,11 +1,13 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
+int main()
+{
+    int n = 756345;
 
-int main() {
-    int n = 34567;
     int reversedNumber = 0;
-    while(n != 0) {
+    while (n != 0)
+    {
         reversedNumber = reversedNumber * 10 + n % 10;
         n /= 10;
     }

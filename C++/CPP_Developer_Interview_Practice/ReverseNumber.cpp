@@ -6,7 +6,11 @@ using namespace std;
 
 int main()
 {
-    int n = 756345;
+    // int n = 756345;
+
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
 
     int org = n;
 

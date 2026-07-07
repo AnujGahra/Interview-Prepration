@@ -15,10 +15,17 @@ int main() {
     int left = 0;
     int right = n - 1;
 
+    // while(left < right) {
+    //     int temp = str[left];
+    //     str[left] = str[right];
+    //     str[right] = temp;
+    //     left++;
+    //     right--;
+    // }
+
+
     while(left < right) {
-        int temp = str[left];
-        str[left] = str[right];
-        str[right] = temp;
+        swap(str[left], str[right]);
         left++;
         right--;
     }

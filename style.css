@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1f2937;
+    padding:15px 8%;
+    position:relative;
+}
+
+.logo{
+    color:#fff;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* It is for Hide checkbox */
+#menu-toggle{
+    display:none;
+}
+
+/* It is for Hide hamburger on desktop */
+.hamburger{
+    display:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* Mobile Screen */
+@media(max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    .nav-links{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:250px;
+        height:100vh;
+        background:#111827;
+        flex-direction:column;
+        padding-top:80px;
+        gap:30px;
+        align-items:center;
+        transition:.4s;
+    }
+
+    #menu-toggle:checked ~ .nav-links{
+        right:0;
+    }
+
+    .nav-links a{
+        font-size:20px;
+    }
+}

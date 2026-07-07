@@ -7,9 +7,23 @@ int main() {
     cin>> str;
     int n = str.length();
 
-    for(int i = n - 1; i>=0; i--) {
-        cout << str[i];
+    // for(int i = n - 1; i>=0; i--) {
+    //     cout << str[i];
+    // }
+
+    // Two pointer approach
+    int left = 0;
+    int right = n - 1;
+
+    while(left < right) {
+        int temp = str[left];
+        str[left] = str[right];
+        str[right] = temp;
+        left++;
+        right--;
     }
+
+    cout << "Reversed string: " << str << endl;
 
 
     return 0;

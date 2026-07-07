@@ -24,11 +24,13 @@ int main() {
     // }
 
 
-    while(left < right) {
-        swap(str[left], str[right]);
-        left++;
-        right--;
-    }
+    // while(left < right) {
+    //     swap(str[left], str[right]);
+    //     left++;
+    //     right--;
+    // }
+
+    reverse(str.begin(), str.end());
 
     cout << "Reversed string: " << str << endl;
 

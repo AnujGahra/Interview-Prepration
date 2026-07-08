@@ -8,3 +8,7 @@ echo "All the values in array are ${myArray[*]}"
 #How to get Specific values?
 echo "${myArray[*]:1}"
 echo "${myArray[*]:1:2}"
+
+#Update our array with new Values
+myArray+=(New 50 60 )
+echo "Values of new array are ${myArray[*]}"

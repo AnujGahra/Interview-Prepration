@@ -9,3 +9,11 @@ do
 
     echo "$i"
 done
+
+
+
+#sleep a specific time
+
+echo "Script Started"
+sleep 5
+echo "Script Resumed After 5 Seconds"

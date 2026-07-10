@@ -24,16 +24,16 @@ int main()
 
     // cout << "Occurrence of '" << ch << "' = " << count << endl;
 
-
-
     unordered_map<char, int> freq;
 
-    for (char ch : str) {
+    for (char ch : str)
+    {
         freq[ch]++;
     }
 
     cout << "\nCharacter Occurrences:\n";
-    for (auto it : freq) {
+    for (auto it : freq)
+    {
         cout << it.first << " : " << it.second << endl;
     }
 

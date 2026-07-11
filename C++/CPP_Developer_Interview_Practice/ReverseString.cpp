@@ -1,10 +1,11 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     string str;
     cout << "Enter a string: ";
-    cin>> str;
+    cin >> str;
     int n = str.length();
 
     // for(int i = n - 1; i>=0; i--) {
@@ -23,7 +24,6 @@ int main() {
     //     right--;
     // }
 
-
     // while(left < right) {
     //     swap(str[left], str[right]);
     //     left++;
@@ -33,7 +33,6 @@ int main() {
     reverse(str.begin(), str.end());
 
     cout << "Reversed string: " << str << endl;
-
 
     return 0;
 }

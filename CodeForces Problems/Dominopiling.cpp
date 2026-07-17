@@ -8,7 +8,7 @@ int main() {
 
     int areaRectangularBoard = m * n; // Calculate the area of the rectangular board
 
-    int areaDomino = 2; // Each domino covers an area of 2
+    int areaDomino = 2; // Each Domino covers an area of 2
 
     int numberOfDominos = areaRectangularBoard / areaDomino; // Calculate the number of dominos needed
 

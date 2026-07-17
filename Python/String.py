@@ -2,6 +2,8 @@ str1 = "This is a string."
 str2 = 'This is another string.'
 str3 = '''This is a multi-line \n string.'''
 
+str1 = "Anuman is a good boy."
+
 
 print(str1)
 print(str2)

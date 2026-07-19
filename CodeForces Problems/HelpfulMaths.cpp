@@ -1,27 +1,30 @@
-// Rearrange like input 3+2+1 and output 1+2+3, and input 1+1+3+1+3 , output 1+1+1+3+3 only sort number not operators
-
-#include<iostream>
+#include <iostream>
+#include <algorithm>
 using namespace std;
-
-
 
 int main() {
     string input;
     cin >> input;
 
-    int n = input.length();
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n - i - 1; j++)
-        {
-            if(input[j] > input[j + 1] && input[j] != '+' && input[j + 1] != '+') {
-                swap(input[j], input[j + 1]);
-            }
+    string numbers = "";
+
+    // Extract only the numbers
+    for (char ch : input) {
+        if (ch != '+') {
+            numbers += ch;
         }
     }
-    
 
+    // Sort the numbers
+    sort(numbers.begin(), numbers.end());
 
-    
+    // Print in required format
+    for (int i = 0; i < numbers.length(); i++) {
+        cout << numbers[i];
+        if (i != numbers.length() - 1) {
+            cout << "+";
+        }
+    }
 
-    cout << input << endl;
+    return 0;
 }

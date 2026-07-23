@@ -6,16 +6,17 @@ int main() {
     int n;
     cin >> n;
 
-    string s;
-    int group = 0;
+    string prev, curr;
 
-    for(int i = 0; i<n; i++) {
-        cin >> s;
+    cin >> prev;
 
-        if(s[i] != s[i - 1]) group++;
-        
+    int group = 1;
 
-        else s[i - 1] = s[i];
+    for(int i = 1; i<n; i++) {
+        cin >> curr;
+
+        if(curr != prev) group++;
+        prev = curr;
 
     }
 

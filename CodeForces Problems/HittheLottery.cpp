@@ -6,6 +6,7 @@
 // . What is the minimum number of bills Allen could receive after withdrawing his entire balance?
 
 #include<iostream>
+#include<vector>
 using namespace std;
 
 

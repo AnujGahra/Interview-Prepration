@@ -4,9 +4,10 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     string guest, host, pile;
-    
+
     cin >> guest >> host >> pile;
 
     string combined = guest + host;
@@ -14,9 +15,12 @@ int main() {
     sort(combined.begin(), combined.end());
     sort(pile.begin(), pile.end());
 
-    if (combined == pile) {
+    if (combined == pile)
+    { // after sorting, if both strings are equal, it means they have the same characters with the same frequency
         cout << "YES" << endl;
-    } else {
+    }
+    else
+    {
         cout << "NO" << endl;
     }
 

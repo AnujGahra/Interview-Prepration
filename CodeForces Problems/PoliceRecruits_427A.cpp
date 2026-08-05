@@ -1,28 +1,34 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-
-int main() {
-
-
+int main()
+{
 
     int n;
-    if (!(cin >> n)) return 0;
+    if (!(cin >> n))
+        return 0;
 
     int available_officers = 0;
     int untreated_crimes = 0;
 
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
+    {
         int event;
         cin >> event;
 
-        if (event == -1) {
-            if (available_officers > 0) {
+        if (event == -1)
+        {
+            if (available_officers > 0)
+            {
                 available_officers--;
-            } else {
+            }
+            else
+            {
                 untreated_crimes++;
             }
-        } else {
+        }
+        else
+        {
             available_officers += event;
         }
     }

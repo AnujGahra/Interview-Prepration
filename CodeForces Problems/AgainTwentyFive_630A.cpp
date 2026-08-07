@@ -1,21 +1,14 @@
 #include<iostream>
-#include <cmath>
 using namespace std;
 
-int power(int n) {
-    
-    int square = pow(5, n);
-
-    // now i need only last 2 digits of the square
-    return square % 100;
-}
 
 
 int main() {
-
-    int n;
+long long n; // long long handles numbers up to 9 * 10^18
     cin >> n;
-    cout << power(n) << "\n";
+    
+    // 5^n always ends in 25 for n >= 2
+    cout << 25 << "\n";
 
     return 0;
 }

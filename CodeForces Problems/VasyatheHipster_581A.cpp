@@ -11,4 +11,6 @@ int main()
 
     cout << differentSocks << " " << sameSocks << endl;
     return 0;
+
+    
 }

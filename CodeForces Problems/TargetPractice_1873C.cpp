@@ -16,7 +16,6 @@ void solve()
         {
             if (row[j] == 'X')
             {
-                // Determine the ring layer (0-indexed from outside to inside)
                 int r = min({i, 9 - i, j, 9 - j});
                 total_points += (r + 1);
             }

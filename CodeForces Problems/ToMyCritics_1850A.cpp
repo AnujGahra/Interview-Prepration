@@ -19,9 +19,9 @@ void solve()
 int main()
 {
 
-    int t;
-    cin >> t;
-    while (t--)
+    int T;
+    cin >> T;
+    while (T--)
     {
         solve();
     }

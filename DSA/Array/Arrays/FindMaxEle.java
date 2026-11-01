@@ -19,6 +19,16 @@ public class FindMaxEle {
         int max = arr[arr.length - 1];
         System.out.println("Maximum element in the sorted array is: " + max);
     }
+
+    // Search th given elemment x in th array. if present then return the index else return -1
+    static int searchElement(int[] arr, int x) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
     
 
 
@@ -27,5 +37,12 @@ public class FindMaxEle {
         MaxElement(arr);
         MaxElementSorted(arr);
 
+        int x = 90;
+        int index = searchElement(arr, x);
+        if (index != -1) {
+            System.out.println("Element " + x + " is present at index: " + index);
+        } else {
+            System.out.println("Element " + x + " is not present in the array.");   
+        }
     }
 }

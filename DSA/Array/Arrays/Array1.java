@@ -9,6 +9,12 @@ public class Array1 {
         float[] weights = new float[3];
         String[] names = new String[3];
 
+        int ages1[] = { 10, 20, 30
+        };
+        for (int i = 0; i < ages1.length; i++) {
+            System.out.print(ages1[i] + " ");
+        }
+
 
         ages[0] = 10;
         ages[1] = 20;

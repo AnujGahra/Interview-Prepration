@@ -29,6 +29,17 @@ public class FindMaxEle {
     }
 
 
+    static int countGreaterThan(int[] arr, int x) {
+        int count = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if (arr[i] > x) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
     static void MaxElement(int[] arr) {
         int max = arr[0];
         for (int i = 1; i < arr.length; i++) {
@@ -82,6 +93,13 @@ public class FindMaxEle {
         int[] arr3 = { 1, 2, 3, 4, 5, 1, 2, 3, 1 };
         int z = 3;
         lastOccurrence(arr3, z);
+
+
+        // count the number of elemt strictly greater than a given number in the array
+        int x1 = 3;
+        int count1 = countGreaterThan(arr3, x1);
+        System.out.println("Number of elements strictly greater than " + x1 + " in the array: " + count1);
+
     }
 
 

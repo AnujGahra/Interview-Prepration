@@ -13,6 +13,21 @@ public class FindMaxEle {
         return count;
     }
 
+    // lastOccurrence of an element in the array
+    static void lastOccurrence(int[] arr, int x) {
+        int lastIndex = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                lastIndex = i;
+            }
+        }
+        if (lastIndex != -1) {
+            System.out.println("Last occurrence of element " + x + " is at index: " + lastIndex);
+        } else {
+            System.out.println("Element " + x + " is not present in the array.");
+        }
+    }
+
 
     static void MaxElement(int[] arr) {
         int max = arr[0];
@@ -61,5 +76,14 @@ public class FindMaxEle {
         int y = 1;
         int count = countOccurencs(arr2, y);
         System.out.println("Element " + y + " occurs " + count + " times in the array.");
+
+
+        // last occurrence of an element in the array
+        int[] arr3 = { 1, 2, 3, 4, 5, 1, 2, 3, 1 };
+        int z = 3;
+        lastOccurrence(arr3, z);
     }
+
+
+
 }

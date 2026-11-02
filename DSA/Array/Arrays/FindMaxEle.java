@@ -3,6 +3,17 @@ import java.util.Arrays;
 public class FindMaxEle {
 
 
+    static int countOccurencs(int[] arr, int x) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
     static void MaxElement(int[] arr) {
         int max = arr[0];
         for (int i = 1; i < arr.length; i++) {
@@ -44,5 +55,11 @@ public class FindMaxEle {
         } else {
             System.out.println("Element " + x + " is not present in the array.");   
         }
+
+        // count the number of occurrences of an element in the array
+        int[] arr2 = { 1, 2, 3, 4, 5, 1, 2, 3, 1 };
+        int y = 1;
+        int count = countOccurencs(arr2, y);
+        System.out.println("Element " + y + " occurs " + count + " times in the array.");
     }
 }

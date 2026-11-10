@@ -32,10 +32,12 @@
 // // console.log(name); // ReferenceError: name is not defined
 // greet();
 
-let age = 20;
-{
-    let age = 24;
-    console.log(age); // Output: 24
-}
-let age = 20;
-console.log(age); // Output: 20
+// let age = 20;
+// {
+//     let age = 24;
+//     console.log(age); // Output: 24
+// }
+// let age = 20;
+// console.log(age); // Output: 20
+
+

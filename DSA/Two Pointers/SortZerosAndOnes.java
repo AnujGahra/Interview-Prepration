@@ -61,7 +61,7 @@ public class SortZerosAndOnes {
     // method to sort the array of 0s and 1s using two pointer approach
     static void sortTwoPointer(int[] arr) {
         int left = 0;
-        int right = arr.length;
+        int right = arr.length - 1;
 
         while(left < right) {
             if(arr[left] == 1 && arr[right] == 0) {
@@ -80,7 +80,8 @@ public class SortZerosAndOnes {
     public static void main(String[] args) {
 
         int [] arr = takeUserInput();
-        sortZeros(arr);
+        // sortZeros(arr);
+        sortTwoPointer(arr);
         printArray(arr);
 
         

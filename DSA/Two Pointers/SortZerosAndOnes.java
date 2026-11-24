@@ -96,14 +96,14 @@ public class SortZerosAndOnes {
         int left = 0;
         int right = arr.length - 1;
         int[] result = new int[n];
-        int k = 0;
+        int k = n-1;
 
         while(left <= right) {
             if(Math.abs(arr[left]) > Math.abs(arr[right])) {
-                result[k++] = arr[left] * arr[left];
+                result[k--] = arr[left] * arr[left];
                 left++;
             } else {
-                result[k++] = arr[right] * arr[right];
+                result[k--] = arr[right] * arr[right];
                 right--;
             }
         }
@@ -131,8 +131,7 @@ public class SortZerosAndOnes {
         // sortTwoPointer(arr);
         // sortEvenOdd(arr);
         int[] squaredArray = sortAndSquare(arr);
-        // printArray(squaredArray);
-        reverseArray(squaredArray);
+        
         printArray(squaredArray);
 
     }

@@ -122,17 +122,35 @@ public class SortZerosAndOnes {
         }
     }
 
+    // Prefix sum of the array
+    static int[] makePrefixSum(int[] arr) {
+        int n = arr.length;
+        int[] prefixSum = new int[n];
+        prefixSum[0] = arr[0];
+
+        for(int i = 1; i<n; i++) {
+            prefixSum[i] = prefixSum[i-1] + arr[i];
+        }
+        return prefixSum;
+    }
+
 
 
     public static void main(String[] args) {
 
         int [] arr = takeUserInput();
         // sortZeros(arr);
+
         // sortTwoPointer(arr);
+
         // sortEvenOdd(arr);
-        int[] squaredArray = sortAndSquare(arr);
-        
-        printArray(squaredArray);
+
+        // int[] squaredArray = sortAndSquare(arr);
+        // printArray(squaredArray);
+
+        int[] prefixSum = makePrefixSum(arr);
+        printArray(prefixSum);
+
 
     }
 

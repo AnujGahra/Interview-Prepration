@@ -131,7 +131,7 @@ public class SortZerosAndOnes {
         // sortTwoPointer(arr);
         // sortEvenOdd(arr);
         int[] squaredArray = sortAndSquare(arr);
-        printArray(squaredArray);
+        // printArray(squaredArray);
         reverseArray(squaredArray);
         printArray(squaredArray);
 

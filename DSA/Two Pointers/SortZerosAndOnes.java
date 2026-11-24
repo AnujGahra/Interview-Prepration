@@ -134,6 +134,15 @@ public class SortZerosAndOnes {
         return prefixSum;
     }
 
+    // prefix sum of the array without using extra space
+    static int[] makePrefixSumInPlace(int[] arr) {
+
+        for(int i = 1; i<arr.length; i++) {
+            arr[i] += arr[i-1];
+        }
+        return arr;
+    }
+
 
 
     public static void main(String[] args) {
@@ -148,9 +157,11 @@ public class SortZerosAndOnes {
         // int[] squaredArray = sortAndSquare(arr);
         // printArray(squaredArray);
 
-        int[] prefixSum = makePrefixSum(arr);
-        printArray(prefixSum);
+        // int[] prefixSum = makePrefixSum(arr);
+        // printArray(prefixSum);
 
+        int[] prefixSumInPlace = makePrefixSumInPlace(arr);
+        printArray(prefixSumInPlace);
 
     }
 

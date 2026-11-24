@@ -58,7 +58,21 @@ public class SortZerosAndOnes {
         
     }
 
-    
+    // method to sort the array of 0s and 1s using two pointer approach
+    static void sortTwoPointer(int[] arr) {
+        int left = 0;
+        int right = arr.length;
+
+        while(left < right) {
+            if(arr[left] == 1 && arr[right] == 0) {
+                swap(arr, left, right);
+                left++;
+                right--;
+            }
+            if(arr[left] == 0) left++;
+            if(arr[right] == 1) right--;
+        }
+    }
 
 
 

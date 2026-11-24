@@ -74,14 +74,29 @@ public class SortZerosAndOnes {
         }
     }
 
+// Question: Sort an Array  even number at beginning and odd number at the end of the array
+    static void sortEvenOdd(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
 
+        while(left < right) {
+            if(arr[left] % 2 != 0 && arr[right] % 2 == 0) {
+                swap(arr, left, right);
+                left++;
+                right--;
+            }
+            if(arr[left] % 2 == 0) left++;
+            if(arr[right] % 2 != 0) right--;
+        }
+    }
 
 
     public static void main(String[] args) {
 
         int [] arr = takeUserInput();
         // sortZeros(arr);
-        sortTwoPointer(arr);
+        // sortTwoPointer(arr);
+        sortEvenOdd(arr);
         printArray(arr);
 
         

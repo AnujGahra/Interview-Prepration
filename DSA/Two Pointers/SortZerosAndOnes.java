@@ -18,6 +18,14 @@ public class SortZerosAndOnes {
         return arr;
     }
 
+    // method to print the array
+    static void printArray(int[] arr) {
+        for(int i = 0; i<arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
     // method to sort the array of 0s and 1s
     static void sortZeros(int[] arr) {
         int zeros = 0;
@@ -32,12 +40,27 @@ public class SortZerosAndOnes {
         }
     }
 
-    static void printArray(int[] arr) {
-        for(int i = 0; i<arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
+    // method to swap two elements in the array
+    static void swap(int [] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+
+        // without using temp variable
+        // arr[a] = arr[a] + arr[b];
+        // arr[b] = arr[a] - arr[b];
+        // arr[a] = arr[a] - arr[b];
+
+        // or
+        // arr[a] = arr[a] ^ arr[b];
+        // arr[b] = arr[a] ^ arr[b];
+        // arr[a] = arr[a] ^ arr[b];
+        
     }
+
+    
+
+
 
 
     public static void main(String[] args) {

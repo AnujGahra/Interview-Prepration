@@ -110,6 +110,19 @@ public class SortZerosAndOnes {
         return result;
     }
 
+    // reverse the array
+    public static void reverseArray(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+
+        while(left < right) {
+            swap(arr, left, right);
+            left++;
+            right--;
+        }
+    }
+
+
 
     public static void main(String[] args) {
 
@@ -118,6 +131,8 @@ public class SortZerosAndOnes {
         // sortTwoPointer(arr);
         // sortEvenOdd(arr);
         int[] squaredArray = sortAndSquare(arr);
+        printArray(squaredArray);
+        reverseArray(squaredArray);
         printArray(squaredArray);
 
     }

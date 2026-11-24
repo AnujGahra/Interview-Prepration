@@ -143,7 +143,11 @@ public class SortZerosAndOnes {
         return arr;
     }
 
-
+    // prefix sum of the array with range query l to r
+    static int rangeQuery(int[] arr, int l, int r) {
+        if(l == 0) return arr[r];
+        return arr[r] - arr[l-1];
+    }
 
     public static void main(String[] args) {
 
@@ -162,6 +166,9 @@ public class SortZerosAndOnes {
 
         int[] prefixSumInPlace = makePrefixSumInPlace(arr);
         printArray(prefixSumInPlace);
+
+        int rangeSum = rangeQuery(prefixSumInPlace, 1, 3);
+        System.out.println("Range Sum: " + rangeSum);
 
     }
 

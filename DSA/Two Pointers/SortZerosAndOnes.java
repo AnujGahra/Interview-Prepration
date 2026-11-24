@@ -90,16 +90,35 @@ public class SortZerosAndOnes {
         }
     }
 
+    // Question: Sort an Array in non-decreasing order and return square of each number in the array
+    static int[] sortAndSquare(int[] arr) {
+        int n = arr.length;
+        int left = 0;
+        int right = arr.length - 1;
+        int[] result = new int[n];
+        int k = 0;
+
+        while(left <= right) {
+            if(Math.abs(arr[left]) > Math.abs(arr[right])) {
+                result[k++] = arr[left] * arr[left];
+                left++;
+            } else {
+                result[k++] = arr[right] * arr[right];
+                right--;
+            }
+        }
+        return result;
+    }
+
 
     public static void main(String[] args) {
 
         int [] arr = takeUserInput();
         // sortZeros(arr);
         // sortTwoPointer(arr);
-        sortEvenOdd(arr);
-        printArray(arr);
-
-        
+        // sortEvenOdd(arr);
+        int[] squaredArray = sortAndSquare(arr);
+        printArray(squaredArray);
 
     }
 

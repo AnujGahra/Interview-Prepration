@@ -149,6 +149,26 @@ public class SortZerosAndOnes {
         return arr[r] - arr[l-1];
     }
 
+
+    // find sum of the array
+    static int sumOfArray(int[] arr) {
+        int sum = 0;
+        for(int i = 0; i<arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    // Check if we can partition the array into two subarrays with equal sum
+    static boolean equalSumPartition(int[] arr) {
+
+        
+
+        return false;
+
+    }
+
+
     public static void main(String[] args) {
 
         int [] arr = takeUserInput();
@@ -164,11 +184,11 @@ public class SortZerosAndOnes {
         // int[] prefixSum = makePrefixSum(arr);
         // printArray(prefixSum);
 
-        int[] prefixSumInPlace = makePrefixSumInPlace(arr);
-        printArray(prefixSumInPlace);
+        // int[] prefixSumInPlace = makePrefixSumInPlace(arr);
+        // printArray(prefixSumInPlace);
 
-        int rangeSum = rangeQuery(prefixSumInPlace, 1, 3);
-        System.out.println("Range Sum: " + rangeSum);
+        // int rangeSum = rangeQuery(prefixSumInPlace, 1, 3);
+        // System.out.println("Range Sum: " + rangeSum);
 
     }
 

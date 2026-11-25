@@ -15,7 +15,6 @@ public class Basicll {
     }
 
     // Display Linked List
-    // commit message: 
     static void display(Node head) {
         Node temp = head;
         while(temp != null) {
@@ -24,6 +23,13 @@ public class Basicll {
         }
     }
 
+    // Display Linked List using recursive
+    // commit message: a
+    static void displayRecur(Node head) {
+        if(head == null) return;
+        System.out.print(head.data + " ");
+        display(head.next);
+    }
 
 
     public static void main(String[] args) {
@@ -60,7 +66,9 @@ public class Basicll {
         // }
 
 
-        display(a);
+        // display(a);
+
+        displayRecur(a);
 
 
 

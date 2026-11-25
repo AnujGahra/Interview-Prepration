@@ -38,6 +38,16 @@ public class Basicll {
         System.out.print(head.data + " ");
     }
 
+    // Impletemt a method to find length of linkedlist
+    static void lengthLinkedList(Node head) {
+        int count = 0;
+        while(head != null) {
+            count++;
+            head = head.next;
+        }
+        System.out.println(count);
+
+    }
 
     public static void main(String[] args) {
         Node a = new Node(5);
@@ -75,7 +85,9 @@ public class Basicll {
 
         // display(a);
 
-        displayRecur(a);
+        // displayRecur(a);
+
+        lengthLinkedList(a);
 
 
 

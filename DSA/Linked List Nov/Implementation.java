@@ -35,6 +35,18 @@ public class Implementation {
                 System.out.print(temp.data + " ");
                 temp = temp.next;
             }
+            System.out.println();
+        }
+
+        // find the length of Linked List
+        void length() {
+            Node temp = head;
+            int count = 0;
+            while(temp != null) {
+                count++;
+                temp = temp.next;
+            }
+            System.out.println("The size of Linked List: " + count);
         }
     }
 
@@ -44,6 +56,7 @@ public class Implementation {
         ll.insertAtEnd(4);
         ll.insertAtEnd(5);
         ll.display();
+        ll.length();
         
     }
 }

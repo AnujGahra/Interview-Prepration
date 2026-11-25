@@ -177,6 +177,19 @@ public class SortZerosAndOnes {
 
     }
 
+    // suffix sum of the array
+    static int[] makeSuffixSum(int[] arr) {
+        int n = arr.length;
+        int[] suffixSum = new int[n];
+        suffixSum[n-1] = arr[n-1];
+
+        for(int i = n-2; i>=0; i--) {
+            suffixSum[i] = suffixSum[i+1] + arr[i];
+        }
+        return suffixSum;
+    }
+
+
 
     public static void main(String[] args) {
 
@@ -199,12 +212,16 @@ public class SortZerosAndOnes {
         // int rangeSum = rangeQuery(prefixSumInPlace, 1, 3);
         // System.out.println("Range Sum: " + rangeSum);
 
-        boolean canPartition = equalSumPartition(arr);
-        if(canPartition) {
-            System.out.println("The array can be partitioned into two subarrays with equal sum.");
-        } else {
-            System.out.println("The array cannot be partitioned into two subarrays with equal sum.");   
-        }
+        // boolean canPartition = equalSumPartition(arr);
+        // if(canPartition) {
+        //     System.out.println("The array can be partitioned into two subarrays with equal sum.");
+        // } else {
+        //     System.out.println("The array cannot be partitioned into two subarrays with equal sum.");   
+        // }
+
+
+        // int[] suffixSum = makeSuffixSum(arr);
+        // printArray(suffixSum);
 
     }
 

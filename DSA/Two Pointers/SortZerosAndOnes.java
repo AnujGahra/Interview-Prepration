@@ -189,7 +189,13 @@ public class SortZerosAndOnes {
         return suffixSum;
     }
 
-
+    // suffix sum of the array without using extra space
+    static int[] makeSuffixSumInPlace(int[] arr) {
+        for(int i = arr.length - 2; i>=0; i--) {
+            arr[i] += arr[i+1];
+        }
+        return arr;
+    }
 
     public static void main(String[] args) {
 
@@ -222,6 +228,9 @@ public class SortZerosAndOnes {
 
         // int[] suffixSum = makeSuffixSum(arr);
         // printArray(suffixSum);
+
+        int[] suffixSumInPlace = makeSuffixSumInPlace(arr);
+        printArray(suffixSumInPlace);
 
     }
 

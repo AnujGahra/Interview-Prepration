@@ -28,7 +28,14 @@ public class Basicll {
     static void displayRecur(Node head) {
         if(head == null) return;
         System.out.print(head.data + " ");
-        display(head.next);
+        displayRecur(head.next);
+    }
+
+    // Reverse list using recursion
+    static void displayRecurRev(Node head) {
+        if(head == null) return;
+        displayRecurRev(head.next);
+        System.out.print(head.data + " ");
     }
 
 
@@ -55,7 +62,7 @@ public class Basicll {
 
         // print linked list
         // commit message: 
-        Node temp = a;
+        // Node temp = a;
         // for(int i = 0; i<5; i++) {
         //     System.out.print(temp.data + " ");
         //     temp = temp.next;

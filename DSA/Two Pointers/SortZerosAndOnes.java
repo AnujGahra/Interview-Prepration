@@ -161,7 +161,16 @@ public class SortZerosAndOnes {
 
     // Check if we can partition the array into two subarrays with equal sum
     static boolean equalSumPartition(int[] arr) {
+        int totalSum = sumOfArray(arr);
 
+        int prefixSum = 0;
+        for(int i = 0; i<arr.length; i++) {
+            prefixSum += arr[i];
+            int suffixSum = totalSum - prefixSum;
+            if(prefixSum == suffixSum) {
+                return true;
+            }
+        }
         
 
         return false;
@@ -189,6 +198,13 @@ public class SortZerosAndOnes {
 
         // int rangeSum = rangeQuery(prefixSumInPlace, 1, 3);
         // System.out.println("Range Sum: " + rangeSum);
+
+        boolean canPartition = equalSumPartition(arr);
+        if(canPartition) {
+            System.out.println("The array can be partitioned into two subarrays with equal sum.");
+        } else {
+            System.out.println("The array cannot be partitioned into two subarrays with equal sum.");   
+        }
 
     }
 

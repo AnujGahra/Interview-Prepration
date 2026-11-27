@@ -115,12 +115,15 @@ public class Implementation {
 
         // Delete at first
         void deleteAtHead() {
-            if (head == null)
+            if (head == null) {
                 return;
-            else {
-                head = head.next;
-                size--;
             }
+
+            head = head.next;
+            if (head == null) {
+                tail = null;
+            }
+            size--;
         }
 
         // Delete at end

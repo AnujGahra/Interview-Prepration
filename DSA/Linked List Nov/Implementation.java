@@ -37,14 +37,15 @@ public class Implementation {
         }
 
         // find the length of Linked List
-        void length() {
+        int length() {
             Node temp = head;
             int count = 0;
             while (temp != null) {
                 count++;
                 temp = temp.next;
             }
-            System.out.println("The size of Linked List: " + count);
+            return count;
+            // System.out.println("The size of Linked List: " + count);
         }
 
         // insert at beggining
@@ -60,13 +61,21 @@ public class Implementation {
         }
 
         // insert at given position
-        // commit message: add
         void insertAtIndex(int idx, int data) {
             Node t = new Node(data);
             Node temp = head;
+            if(idx == 0) {
+                insertAtHead(data);
+                return;
+            }
+            if(idx >= length()) {
+                insertAtEnd(data);
+                return;
+            }
             for (int i = 0; i < idx - 1; i++) {
                 temp = temp.next;
             }
+            
             t.next = temp.next;
             temp.next = t;
 
@@ -89,6 +98,15 @@ public class Implementation {
         ll.insertAtIndex(3, 87);
         ll.display();
         ll.length();
+        ll.insertAtIndex(5, 100);
+        ll.display();
+        ll.length();
+        ll.insertAtIndex(9, 13);
+        ll.display();
+        ll.length();
+        ll.insertAtIndex(0, 11);
+        ll.display();
+        System.out.println(ll.length());
 
     }
 }

@@ -17,7 +17,7 @@ public class Basicll {
     // Display Linked List
     static void display(Node head) {
         Node temp = head;
-        while(temp != null) {
+        while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
@@ -26,14 +26,16 @@ public class Basicll {
     // Display Linked List using recursive
     // commit message: a
     static void displayRecur(Node head) {
-        if(head == null) return;
+        if (head == null)
+            return;
         System.out.print(head.data + " ");
         displayRecur(head.next);
     }
 
     // Reverse list using recursion
     static void displayRecurRev(Node head) {
-        if(head == null) return;
+        if (head == null)
+            return;
         displayRecurRev(head.next);
         System.out.print(head.data + " ");
     }
@@ -41,7 +43,7 @@ public class Basicll {
     // Impletemt a method to find length of linkedlist
     static void lengthLinkedList(Node head) {
         int count = 0;
-        while(head != null) {
+        while (head != null) {
             count++;
             head = head.next;
         }
@@ -49,17 +51,19 @@ public class Basicll {
 
     }
 
-    // insert at end 
+    // insert at end
     static void insertAtEnd(Node head, int data) {
         Node val = new Node(data);
         Node temp = head;
-        while(temp.next != null) {
+        while (temp.next != null) {
             temp = temp.next;
         }
         temp.next = val;
-        
-        
+
     }
+    
+    
+
     public static void main(String[] args) {
         Node a = new Node(5);
         // System.out.println(a.next);
@@ -82,17 +86,16 @@ public class Basicll {
         // System.out.println(a.next.next.next.next.data);
 
         // print linked list
-        // commit message: 
+        // commit message:
         // Node temp = a;
         // for(int i = 0; i<5; i++) {
-        //     System.out.print(temp.data + " ");
-        //     temp = temp.next;
+        // System.out.print(temp.data + " ");
+        // temp = temp.next;
         // }
         // while(temp != null) {
-        //     System.out.print(temp.data + " ");
-        //     temp = temp.next;
+        // System.out.print(temp.data + " ");
+        // temp = temp.next;
         // }
-
 
         // display(a);
 
@@ -103,9 +106,6 @@ public class Basicll {
         insertAtEnd(a, 87);
         display(a);
 
-
-
     }
 
-    
 }

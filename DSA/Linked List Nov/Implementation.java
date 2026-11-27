@@ -42,8 +42,8 @@ public class Implementation {
             // Node temp = head;
             // int count = 0;
             // while (temp != null) {
-            //     count++;
-            //     temp = temp.next;
+            // count++;
+            // temp = temp.next;
             // }
             return size;
             // System.out.println("The size of Linked List: " + count);
@@ -94,6 +94,39 @@ public class Implementation {
             }
             return temp.data;
         }
+
+        // Delete at any index
+        void deleteAtIndex(int idx) {
+            Node temp = head;
+            if (idx == 0) {
+                head = head.next;
+                size--;
+                return;
+            }
+
+            for (int i = 1; i <= idx; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            tail = temp;
+            size--;
+
+        }
+
+        // Delete at first
+        void deleteAtHead() {
+            if (head == null)
+                return;
+            else {
+                head = head.next;
+                size--;
+            }
+        }
+
+
+        // Delete at end
+        
+
     }
 
     public static void main(String[] args) {
@@ -123,7 +156,13 @@ public class Implementation {
         System.out.println(ll.length());
 
         System.out.println(ll.getElement(3));
-        
+
+        ll.deleteAtIndex(3);
+        ll.display();
+        ll.deleteAtHead();
+        ll.display();
+        ll.deleteAtHead();
+        ll.display();
 
     }
 }

@@ -26,7 +26,6 @@ public class Implementation {
         }
 
         // Display Linked List
-        // commit message: a
         void display() {
             Node temp = head;
             while (temp != null) {
@@ -64,21 +63,32 @@ public class Implementation {
         void insertAtIndex(int idx, int data) {
             Node t = new Node(data);
             Node temp = head;
-            if(idx == 0) {
+            if (idx == 0) {
                 insertAtHead(data);
                 return;
             }
-            if(idx >= length()) {
+            if (idx >= length()) {
                 insertAtEnd(data);
                 return;
             }
             for (int i = 0; i < idx - 1; i++) {
                 temp = temp.next;
             }
-            
+
             t.next = temp.next;
             temp.next = t;
 
+        }
+
+        // getElement method
+        int getElement(int idx) {
+            Node temp = head;
+            int count = 0;
+            for (int i = 1; i <= idx; i++) {
+                System.out.println(count++);
+                temp = temp.next;
+            }
+            return temp.data;
         }
     }
 
@@ -107,6 +117,8 @@ public class Implementation {
         ll.insertAtIndex(0, 11);
         ll.display();
         System.out.println(ll.length());
+
+        System.out.println(ll.getElement(3));
 
     }
 }

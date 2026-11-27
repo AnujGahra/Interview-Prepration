@@ -62,6 +62,26 @@ public class Practice {
         return arr;
     }
 
+    // Question: Sort an Array  even number at beginning and odd number at the end of the array
+    // input -> [1, 2, 3, 4, , 6, 7, 8]
+    // output -> [2, 4, 6, 8, 1, 3, 5, 7]
+    static int[] evenBrute(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+
+        while(left < right) {
+            if(arr[left] % 2 != 0 && arr[right] % 2 == 0) {
+                swap(arr, left, right);
+                left++;
+                right--;
+            }
+
+            if(arr[left] % 2 == 0) left++;
+            if(arr[right] % 2 != 0) right--;
+        }
+        return arr;
+    }
+
 
     public static void main(String[] args) {
         int[] arr = inputArray();
@@ -75,8 +95,11 @@ public class Practice {
         // int[] arrSwap = swap(arr, 2, 4);
         // printArray(arrSwap);
 
-        int[] arrtp = sortZerosTwoPointer(arr);
-        printArray(arrtp);
+        // int[] arrtp = sortZerosTwoPointer(arr);
+        // printArray(arrtp);
+
+        int[] arrEven = evenBrute(arr);
+        printArray(arrEven);
 
 
 

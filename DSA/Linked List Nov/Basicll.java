@@ -49,6 +49,17 @@ public class Basicll {
 
     }
 
+    // insert at end 
+    static void insertAtEnd(Node head, int data) {
+        Node val = new Node(data);
+        Node temp = head;
+        while(temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = val;
+        
+        
+    }
     public static void main(String[] args) {
         Node a = new Node(5);
         // System.out.println(a.next);
@@ -88,6 +99,9 @@ public class Basicll {
         // displayRecur(a);
 
         lengthLinkedList(a);
+
+        insertAtEnd(a, 87);
+        display(a);
 
 
 

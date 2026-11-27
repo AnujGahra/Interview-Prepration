@@ -13,6 +13,7 @@ public class Implementation {
     public static class LinkedList {
         Node head = null;
         Node tail = null;
+        int size = 0;
 
         void insertAtEnd(int data) {
             Node temp = new Node(data);
@@ -22,6 +23,7 @@ public class Implementation {
                 tail.next = temp;
             }
             tail = temp;
+            size++;
 
         }
 
@@ -37,13 +39,13 @@ public class Implementation {
 
         // find the length of Linked List
         int length() {
-            Node temp = head;
-            int count = 0;
-            while (temp != null) {
-                count++;
-                temp = temp.next;
-            }
-            return count;
+            // Node temp = head;
+            // int count = 0;
+            // while (temp != null) {
+            //     count++;
+            //     temp = temp.next;
+            // }
+            return size;
             // System.out.println("The size of Linked List: " + count);
         }
 
@@ -57,6 +59,7 @@ public class Implementation {
                 temp.next = head;
                 head = temp;
             }
+            size++;
         }
 
         // insert at given position
@@ -77,6 +80,7 @@ public class Implementation {
 
             t.next = temp.next;
             temp.next = t;
+            size++;
 
         }
 
@@ -119,6 +123,7 @@ public class Implementation {
         System.out.println(ll.length());
 
         System.out.println(ll.getElement(3));
+        
 
     }
 }

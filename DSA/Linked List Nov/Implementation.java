@@ -123,9 +123,28 @@ public class Implementation {
             }
         }
 
-
         // Delete at end
-        
+        void deleteAtEnd() {
+            if (head == null) {
+                return;
+            }
+
+            // Case 1: Only one node in the list
+            if (head.next == null) {
+                head = null;
+                size--;
+                return;
+            }
+
+            // Case 2: Two or more nodes — stop at the second-to-last node
+            Node temp = head;
+            while (temp.next.next != null) {
+                temp = temp.next;
+            }
+
+            temp.next = null;
+            size--;
+        }
 
     }
 

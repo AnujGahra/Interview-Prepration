@@ -138,6 +138,18 @@ public class Practice {
 
     }
 
+    // suffix sum of the array
+    static int[] suffixSum(int[] arr) {
+        int n = arr.length;
+        int[] suffix = new int[n];
+        suffix[n-1] = arr[n-1];
+
+        for(int i = n-2; i>=0; i--) {
+            suffix[i] = suffix[i+1] + arr[i];
+        }
+
+        return suffix;
+    }
 
     public static void main(String[] args) {
         int[] arr = inputArray();
@@ -157,8 +169,11 @@ public class Practice {
         // int[] arrEven = evenBrute(arr);
         // printArray(arrEven);
 
-        int[] preSum = prefixSum(arr);
-        printArray(preSum);
+        // int[] preSum = prefixSum(arr);
+        // printArray(preSum);
+
+        int[] suffix = suffixSum(arr);
+        printArray(suffix);
 
 
 

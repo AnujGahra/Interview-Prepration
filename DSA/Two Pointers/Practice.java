@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Practice {
 
@@ -82,6 +82,39 @@ public class Practice {
         return arr;
     }
 
+    // Sort an Array in non-decreasing order and return square of each number in the array
+    static int[] sortAndSquare(int[] arr) {
+        int n = arr.length;
+        int left = 0;
+        int right = arr.length - 1;
+        int[] result = new int[n];
+        int k = n-1;
+
+        while(left <= right) {
+            if(Math.abs(arr[left]) > Math.abs(arr[right])) {
+                result[k--] = arr[left] * arr[left];
+                left++;
+            } else {
+                result[k--] = arr[right] * arr[right];
+                right--;
+            }
+        }
+        return result;
+    }
+
+
+    // prefixSum of the array
+    // commit message: add
+    static int[] prefixSum(int[] arr) {
+        int n = arr.length;
+        int[] result = new int[n];
+        result[0] = arr[0];
+
+        for(int i = 1; i<n; i++) {
+            result[i] = result[i-1] + arr[i];
+        }
+        return result;
+    }
 
     public static void main(String[] args) {
         int[] arr = inputArray();
@@ -98,8 +131,11 @@ public class Practice {
         // int[] arrtp = sortZerosTwoPointer(arr);
         // printArray(arrtp);
 
-        int[] arrEven = evenBrute(arr);
-        printArray(arrEven);
+        // int[] arrEven = evenBrute(arr);
+        // printArray(arrEven);
+
+        int[] preSum = prefixSum(arr);
+        printArray(preSum);
 
 
 

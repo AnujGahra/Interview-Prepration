@@ -104,7 +104,6 @@ public class Practice {
 
 
     // prefixSum of the array
-    // commit message: add
     static int[] prefixSum(int[] arr) {
         int n = arr.length;
         int[] result = new int[n];
@@ -115,6 +114,30 @@ public class Practice {
         }
         return result;
     }
+
+    static int sumArray(int[] arr) {
+        int sum = 0;
+        for(int i = 0; i<arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    // Check if we can partition the array into two subarrays with equal sum
+    static boolean partSum(int[] arr) {
+        int totalSum = sumArray(arr);
+
+        int prefixSum = 0;
+        for(int i = 0; i<arr.length; i++) {
+            prefixSum += arr[i];
+            int suffix = totalSum - prefixSum;
+            if(prefixSum == suffix) return true;
+        }
+        return false;
+
+
+    }
+
 
     public static void main(String[] args) {
         int[] arr = inputArray();
